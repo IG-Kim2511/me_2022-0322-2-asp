@@ -1,3 +1,84 @@
-*{
-    background-color: yellow;
-}
+:root {
+
+    /* main */
+  --width-main: 1200px;
+
+  /* font */
+  --font-base: 'Cormorant Upright', serif;
+  --font-alt: 'Open Sans', sans-serif;
+  
+  /* size */
+  --base: 1rem;
+  --sm: calc(var(--base) * 1.5);
+  --med: calc(var(--base) * 3);
+  --large: calc(var(--base) * 5);
+
+  /*  */
+  --shadow: 0 2rem 3rem #777;
+
+  /* border-radius :basic 4px=0.25rem  */
+  --border-radius-4px: 0.3rem;
+
+  /* Animation :basic 300ms=0.3s  */
+  --animation_basic-duration-300ms: 300ms;
+
+  /* letterspacing : basic 0.1rem */
+  --letterspacing-basic: 0.1rem;
+
+  
+
+  /* color */
+  --color-main1: #fff;
+  --color-main2: #fff;
+  --color-main3: #fff;
+
+
+   /* bootstrap */
+  --color-primary: #0d6efd;
+  --color-secondary: #6C757D;
+  --color-success: #198754;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #0dcaf0;
+  --color-light: #f8f9fa;
+  --color-dark: #212529;
+
+
+  
+  }
+  
+  * {
+    text-decoration: none; 
+    border: 0;
+    margin: 0;
+    padding: 0;  
+
+    box-sizing: border-box;  
+    transition: all 0.2s linear;   
+    scroll-behavior: smooth;
+  }
+
+  .myBtn {
+    box-shadow: 0px 1px 0px 0px #f0f7fa;
+    background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+    background-color: #33bdef;
+    border-radius: 6px;
+    border: 1px solid #057fd0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px #5b6178;
+  }
+  .myBtn:hover {
+    background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+    background-color: #019ad2;
+  }
+  .myBtn:active {
+    position: relative;
+    top: 1px;
+  }

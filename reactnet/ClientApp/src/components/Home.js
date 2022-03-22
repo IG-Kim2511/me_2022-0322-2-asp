@@ -8,6 +8,7 @@ export class Home extends Component {
       <div>
         <h1>Hello, Pioneering Programmers!</h1>
    
+        <button className='myBtn'>btn</button>
       </div>
     );
   }
