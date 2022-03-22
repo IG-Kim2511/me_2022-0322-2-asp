@@ -46,9 +46,13 @@ function App() {
       </div>
         <main className='world'>
           
-          <div className='world-left'>
+          <div className='world-left light'>
             <button className='myBtn' onClick={()=>{setData('Theme was set to Dark')}} >dark theme</button>
-            <button className='myBtn btn_me' onClick={()=>{setData('Button 3 was added')}}>white</button>
+
+
+            <button className='myBtn btn_me light' onClick={()=>{setData('Button 3 was added')}}>white</button>
+
+            
             <div className="text">text</div>
 
             <div className='renderingBtn'></div>

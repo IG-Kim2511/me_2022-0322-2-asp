@@ -21,15 +21,43 @@
   /* letterspacing : basic 0.1rem */
   --letterspacing-basic: 0.1rem;  
 
-  /* color */
+  /* color-light */
+
+  --color-light-btn: #cc0000;
+  --color-light-btn-text: white;
+  --color-light-left-background: #cecece;
+  --color-light-left-text: #2f4f4f;
+  
+  --color-light-right-background: white;
+  --color-light-right-text: #000000;
+
+  /* color-dark */
+
+  --color-dark-btn: #f0f8ff;
+  --color-dark-btn-text: 800080;
+  --color-dark-left-background: white;
+  --color-dark-left-text: #696969;
+  
+  --color-dark-right-background: #008080;
+  --color-dark-right-text: white;
+
+
+
+
+
+
+
+
+
+
+
+
+
   --color-main1: #cecece;
   --color-main2: white;
 
   --color-text1: #2f4f4f;
   --color-text2: #000000;
-
-
-
 
 
   --color-primary: #0d6efd;
@@ -58,30 +86,27 @@
 
   .myBtn {
     box-shadow: 0px 1px 0px 0px #f0f7fa;
-    background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  
     background-color: #33bdef;
     border-radius: 6px;
-    border: 1px solid #057fd0;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    font-family: Arial;
+   
     font-size: 15px;
     font-weight: bold;
     padding: 6px 24px;
     text-decoration: none;
     text-shadow: 0px -1px px #5b6178;
 
-   margin: 0.5rem;
+    margin: 0.5rem;
   }
-  .myBtn:hover {
-    background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
-    background-color: #019ad2;
-  }
+
   .myBtn:active {
     position: relative;
     top: 1px;
   }
+
 
   /* 🥚 */
 
@@ -96,7 +121,7 @@
       justify-content: space-between;
       align-items: center;
   }
-  .world .world-left{
+  .world .world-left.light{
       background-color: var(--color-main1);      
       width: 50vw;
       height: 80vh;
@@ -109,18 +134,11 @@
   }
 
   /*  */
-  .btn_me {
-    background: linear-gradient(to bottom, #cc0000 5%, #cc0000 100%);
+  .myBtn.light {    
+    background-color: #cc0000;/*  */
+    color: white;/*  */
   }
-  .btn_me:hover {
-    background: linear-gradient(to bottom, #cc0000 5%, #cc0000 100%);
-    background-color: #cc0000;
-  }
-  
-  .btn_me:active {
-    position: relative;
-    top: 1px;
-  }
+
 
   /*  */
   .world-left .text {
