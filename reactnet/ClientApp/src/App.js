@@ -27,27 +27,42 @@ function App() {
     setInput("");    
   }
 
-
-  //  {/* 🍀js 0108 */}  
-  const renderingBtnElm = document.querySelector('.renderingBtn');
+    //  {/* 🍀js 0108 */}  
+    const renderingBtnElm = document.querySelector('.renderingBtn');
   
-  function createBtn() {
+    function createBtn() {
+  
+        // let button =  document.createElement('button');
+        // button.classList.add('myBtn');
+        // button.innerHTML = `btn(1)`;     
+  
+        // renderingBtnElm.append(`button`);
+      
+      // renderingBtnElm.innerHTML +=`
+      //   <button className="myBtn">btn(1)</button>
+      // `;
+  
+      // setData(`button 1 added`)
+  
+      // className="myBtn"
+      // onClick={()=>{setData("button(1) clicked")}}    
+  
+      let button = document.createElement('button');
+  
+      button.innerHTML = 'click me';
+  
+      button.onclick = function(){
+           setData(`button 1 clicked`)
+              return false;
+          };
+      
+      renderingBtnElm.appendChild(button);
 
-      // let button =  document.createElement('button');
-      // button.classList.add('myBtn');
-      // button.innerHTML = `btn(1)`;     
 
-      // renderingBtnElm.append(`button`);
-    
-    renderingBtnElm.innerHTML +=`
-      <button className="myBtn">btn(1)</button>
-    `;
+      setData(`button 1 added`)
+    }
+  
 
-    setData(`button 1 added`)
-
-    // className="myBtn"
-    // onClick={()=>{setData("button(1) clicked")}}    
-  }
 
   
   // 🍀 js 0310. dark mode
@@ -113,9 +128,9 @@ function App() {
   // 🍀 js220406
   function btnClicked() {
     setData(`${dateTime} Button (x) clicked`)
+    
+    setTimeout(() => {   setData('')}, 1000);
   }
-
-
 
 
   return (
