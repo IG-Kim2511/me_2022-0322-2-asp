@@ -10,7 +10,7 @@ function App() {
   // {/* js 1149 */}  {/* js 1208 */}
   const [input, setInput] = useState("")
   
-  const [dark, setDark] = useState("dark")
+  const [dark, setDark] = useState("Dark")
   
   
   
@@ -56,28 +56,32 @@ function App() {
     createMessage(`${dateTime} Theme was set to light `)
 
 
-    setDark("light");
+    if (dark ==="Dark") {
+      setDark("Light");      
+    }else{
+      setDark("Dark");
+    }
   }
 
   
-  function lightMode() {
-    worldLeft.classList.toggle('dark');    
-    worldRight.classList.toggle('dark');    
+  // function lightMode() {
+  //   worldLeft.classList.toggle('light');    
+  //   worldRight.classList.toggle('light');    
 
-    worldLeftText.classList.toggle('dark');    
-    worldRightText.classList.toggle('dark');    
+  //   worldLeftText.classList.toggle('light');    
+  //   worldRightText.classList.toggle('light');    
        
 
-    myBtnAll.forEach((p_item)=>{
-      p_item.classList.toggle('dark');
+  //   myBtnAll.forEach((p_item)=>{
+  //     p_item.classList.toggle('light');
 
-    });
+  //   });
 
-    // setData(`${dateTime} Theme was set to light `)
+  //   // setData(`${dateTime} Theme was set to light `)
 
-    createMessage(`${dateTime} Theme was set to light `)
-    setDark("dark");
-  }
+  //   createMessage(`${dateTime} Theme was set to light `)
+  //   setDark("dark");
+  // }
 
 
   
@@ -165,7 +169,7 @@ function createMessage(p_message) {
           
           <section className='world-left light'>
 
-            <button className='myBtn light theme' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>{dark} theme</button>
+            <button className='myBtn light theme' onClick={()=>{darkMode()}}>{dark} theme</button>
 
 
             {/* js 0108 */}
