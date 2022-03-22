@@ -52,7 +52,7 @@ function App() {
     //🧨 js220400
     setData(`${dateTime} Theme was set to Dark `)
 
-    setTimeout(() => {   setData('')}, 1000);
+    setTimeout(() => {   setData('')}, 2000);
 
     setDark("light");
   }
@@ -76,7 +76,7 @@ function App() {
     setData(`${dateTime} Theme was set to light `)
 
 
-    setTimeout(() => {   setData('')}, 1000);
+    setTimeout(() => {   setData('')}, 2000);
 
     setDark("dark");
   }
@@ -88,7 +88,7 @@ function App() {
   function submit() {
     setData(`“Message Sent: [${input} from text area]”`)
     
-    setTimeout(() => {   setData('')}, 1000); 
+    setTimeout(() => {   setData('')}, 2000); 
     setInput("");   
   }
 
@@ -167,11 +167,11 @@ function App() {
           <input type="text" value={input}  onChange={(e) => setInput(e.target.value)} />
 
           {/* 🍀js 1208. Sending input text when I click button */}
-          <button className='myBtn light' onClick={()=>{ submit(); }}>send</button>
+          <button className='myBtn light' onClick={()=>{ submit() }}>send</button>
 
           <button className='myBtn clear light' onClick={()=>{clear()}}>clear</button>
 
-          <button className='myBtn block light' onClick={()=>{createBtn();}}>Add Button</button>
+          <button className='myBtn block light' onClick={()=>{createBtn()}}>Add Button</button>
         </footer>
     </div>
   );
