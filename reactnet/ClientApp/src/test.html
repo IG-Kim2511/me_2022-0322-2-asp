@@ -7,23 +7,53 @@
     <title>🍀</title>
 </head>
 <body>
-    
+
+    <h1>2</h1>
+
     <button onclick="foo()">asfdasdfasf</button>
     <div class="test">test</div>
+
+    
     <script>
+        let i = 0;
 
-                
         let foo = function(){
-            let button = document.createElement('button');
+                    let button = document.createElement('button');
 
-            button.innerHTML = 'click me';
+                    i++;
 
-            button.onclick = function(){
-                    alert('here be dragons');return false;
+                    button.innerHTML = `${i}`;
+
+                    button.onclick = function(){
+                            alert('here be dragons');
+                            return false;
+                        };
+                    
+                    document.body.appendChild(button);
                 };
-            
-            document.body.appendChild(button);
-        };
+
     </script>
+    
+
+    <!-- 
+
+            <button onclick="foo()">asfdasdfasf</button>
+            <div class="test">test</div>
+            <script>
+
+                        
+                let foo = function(){
+                    let button = document.createElement('button');
+
+                    button.innerHTML = 'click me';
+
+                    button.onclick = function(){
+                            alert('here be dragons');return false;
+                        };
+                    
+                    document.body.appendChild(button);
+                };
+            </script>
+     -->
 </body>
 </html>
