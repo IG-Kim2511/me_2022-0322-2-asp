@@ -27,11 +27,13 @@ function App() {
   
   // 🍀 js 0310. dark mode
   const worldLeft = document.querySelector('.world-left');  
-  const worldLeftText = document.querySelector('.world-left .text');
-
   const worldRight = document.querySelector('.world-right');
-  const worldRightText = document.querySelector('.world-right .text');
+
+
   
+  const worldLeftTextAll = document.querySelectorAll('.world-left .text');
+  const worldRightTextAll = document.querySelectorAll('.world-right .text');
+
   const myBtnAll = document.querySelectorAll('.myBtn');
   
 
@@ -47,42 +49,26 @@ function App() {
       setDarktitle("Dark");
     }
 
-    worldLeft.classList.toggle('dark');    
-    worldRight.classList.toggle('dark');    
-
-    worldLeftText.classList.toggle('dark');    
-    worldRightText.classList.toggle('dark');   
-     
     myBtnAll.forEach((p_item)=>{
-      p_item.classList.toggle('dark');
-
+      p_item.classList.toggle("dark");
     });
+
+    worldLeftTextAll.forEach((p_item)=>{
+      p_item.classList.toggle("dark");
+    });
+
+    worldRightTextAll.forEach((p_item)=>{
+      p_item.classList.toggle("dark");
+    });
+
+        
+    worldLeft.classList.toggle("dark");    
+    worldRight.classList.toggle("dark");    
+     
 
   }
 
   
-  // function lightMode() {
-  //   worldLeft.classList.toggle('light');    
-  //   worldRight.classList.toggle('light');    
-
-  //   worldLeftText.classList.toggle('light');    
-  //   worldRightText.classList.toggle('light');    
-       
-
-  //   myBtnAll.forEach((p_item)=>{
-  //     p_item.classList.toggle('light');
-
-  //   });
-
-  //   // setData(`${dateTime} Theme was set to light `)
-
-  //   createMessage(`${dateTime} Theme was set to light `)
-  //   setDark("dark");
-  // }
-
-
-  
-    
 
 
     //  {/* 🍀js 0108. create button  */}  
@@ -169,6 +155,7 @@ function createMessage(p_message) {
             <button className='myBtn light theme' onClick={()=>{darkMode()}}>{darktitle} theme</button>
 
 
+            <div className="text">text</div>
             {/* js 0108 */}
             <div className='renderingBtn'></div>
           
@@ -177,6 +164,8 @@ function createMessage(p_message) {
 
           <section className='world-right light'>
      
+           <div className="text">text</div>
+
             {/* js 220540 */}  
             <div className='renderingMessage'></div>
 
