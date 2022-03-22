@@ -7,6 +7,18 @@ function App() {
   
   // {/* js 1149 */}  {/* js 1208 */}
   const [input, setInput] = useState("")
+
+  const renderingBtnElm = document.querySelector('.renderingBtn');
+  
+  function createBtn() {
+    renderingBtnElm.innerHTML=`
+      <button>btn(1)</button>
+    `;
+
+    // onClick={()=>{setData("button(1) clicked")}}
+
+    
+  }
   
   return (
     <div>
@@ -19,6 +31,8 @@ function App() {
             <button className='myBtn' onClick={()=>{setData('Theme was set to Dark')}} >dark theme</button>
             <button className='myBtn btn_me' onClick={()=>{setData('Button 3 was added')}}>white</button>
             <div className="text">text</div>
+
+            <div className='renderingBtn'></div>
           
           </div>
           <div className='world-right'>
@@ -40,7 +54,7 @@ function App() {
 
           <button className='myBtn clear' onClick={()=>{setData(``)}}>clear</button>
 
-          <button className='myBtn block'>Add Button</button>
+          <button className='myBtn block' onClick={()=>{createBtn();}}>Add Button</button>
         </footer>
     </div>
   );
