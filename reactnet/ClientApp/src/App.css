@@ -62,13 +62,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
   }
 
   .world{
       display: flex;
       justify-content: space-between;
       align-items: center;
+
   }
+
+
+
   .world .world-left.light{     /*  */
       background-color: var(--color-light-left-background);      
       width: 50vw;
