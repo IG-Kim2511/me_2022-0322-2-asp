@@ -22,9 +22,15 @@
   --letterspacing-basic: 0.1rem;  
 
   /* color */
-  --color-main1: #fff;
-  --color-main2: #fff;
-  --color-main3: #fff;
+  --color-main1: #cecece;
+  --color-main2: white;
+
+  --color-text1: #2f4f4f;
+  --color-text2: #000000;
+
+
+
+
 
   --color-primary: #0d6efd;
   --color-secondary: #6C757D;
@@ -74,19 +80,47 @@
 
   /* 🥚 */
 
+  .title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
   .world{
       display: flex;
       justify-content: space-between;
       align-items: center;
   }
   .world .world-left{
-      background-color: var(--color-light);      
+      background-color: var(--color-main1);      
       width: 50vw;
       height: 80vh;
   }
 
   .world .world-right{
-      background-color: var(--color-secondary);      
+      background-color: var(--color-main2);      
       width: 50vw;
       height: 80vh;
+  }
+
+  /*  */
+  .btn_me {
+    background: linear-gradient(to bottom, #cc0000 5%, #cc0000 100%);
+  }
+  .btn_me:hover {
+    background: linear-gradient(to bottom, #cc0000 5%, #cc0000 100%);
+    background-color: #cc0000;
+  }
+  
+  .btn_me:active {
+    position: relative;
+    top: 1px;
+  }
+
+  /*  */
+  .world-left .text {
+      color: var(--color-text1);
+  }
+  .world-right .text {
+      color: var(--color-text2);
   }

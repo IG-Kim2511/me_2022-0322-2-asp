@@ -6,13 +6,21 @@ export class Home extends Component {
   render () {
     return (
       <div>
-        <h1>Hello, Pioneering Programmers!</h1>
+        <div className='title'>
+          <h1>Hello, Pioneering Programmers!</h1>
+          <button className='myBtn'>dark</button>
+        </div>
         <main className='world'>
-          <div className='world-left'></div>
-          <div className='world-right'></div>
+          <div className='world-left'>
+            <button className='myBtn btn_me'>white</button>
+            <div className="text">text</div>
+          
+          </div>
+          <div className='world-right'>
+            <div className="text">text</div>
+          </div>
         </main>
    
-        <button className='myBtn'>btn</button>
       </div>
     );
   }
