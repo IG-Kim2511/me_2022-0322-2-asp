@@ -23,6 +23,8 @@ function App() {
       <button>btn(1)</button>
     `;
 
+    setData(`button 1 added`)
+
     // className="myBtn"
     // onClick={()=>{setData("button(1) clicked")}}
 
