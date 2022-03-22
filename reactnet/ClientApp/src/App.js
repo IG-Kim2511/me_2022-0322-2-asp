@@ -30,54 +30,88 @@ function App() {
   const worldRight = document.querySelector('.world-right');
   const worldRightText = document.querySelector('.world-right .text');
   
-  const myBtn = document.querySelector('.myBtn');
-  
   const myBtnAll = document.querySelectorAll('.myBtn');
   
 
-  const themeElm = document.querySelector('.theme');
 
-  function darkMode() {
-    worldLeft.classList.toggle('dark');    
-    worldRight.classList.toggle('dark');    
+  function mode(params) {
 
-    worldLeftText.classList.toggle('dark');    
-    worldRightText.classList.toggle('dark');    
+    if ({dark}==="dark") {
+      createMessage(`${dateTime} Theme was set to light `)    
+      setDark("light");
+  
+      worldLeft.classList.toggle('dark');    
+      worldRight.classList.toggle('dark');    
+  
+      worldLeftText.classList.toggle('dark');    
+      worldRightText.classList.toggle('dark');    
+       
+  
+      myBtnAll.forEach((p_item)=>{
+        p_item.classList.toggle('dark');
+  
+      });  
+   
+    } else {
+      
+      createMessage(`${dateTime} Theme was set to light `)
+      setDark("dark");
+ 
+     worldLeft.classList.toggle('dark');    
+     worldRight.classList.toggle('dark');    
+ 
+     worldLeftText.classList.toggle('dark');    
+     worldRightText.classList.toggle('dark');    
+        
+ 
+     myBtnAll.forEach((p_item)=>{
+       p_item.classList.toggle('dark');
+     }); 
+
+    }
+    
+  }
+
+
+
+  // function darkMode() {
+  //   //🧨 js220400
+  //   // setData(`${dateTime} Theme was set to Dark `)
+
+  //   createMessage(`${dateTime} Theme was set to light `)    
+  //   setDark("light");
+
+  //   worldLeft.classList.toggle('dark');    
+  //   worldRight.classList.toggle('dark');    
+
+  //   worldLeftText.classList.toggle('dark');    
+  //   worldRightText.classList.toggle('dark');    
      
 
-    myBtnAll.forEach((p_item)=>{
-      p_item.classList.toggle('dark');
+  //   myBtnAll.forEach((p_item)=>{
+  //     p_item.classList.toggle('dark');
 
-    });
-
-   
-    //🧨 js220400
-    // setData(`${dateTime} Theme was set to Dark `)
-    createMessage(`${dateTime} Theme was set to light `)
-
-
-    setDark("light");
-  }
+  //   });  
+ 
+  // }
 
   
-  function lightMode() {
-    worldLeft.classList.toggle('dark');    
-    worldRight.classList.toggle('dark');    
+  // function lightMode() {
+  //    // setData(`${dateTime} Theme was set to light `)
+  //    createMessage(`${dateTime} Theme was set to light `)
+  //    setDark("dark");
 
-    worldLeftText.classList.toggle('dark');    
-    worldRightText.classList.toggle('dark');    
+  //   worldLeft.classList.toggle('dark');    
+  //   worldRight.classList.toggle('dark');    
+
+  //   worldLeftText.classList.toggle('dark');    
+  //   worldRightText.classList.toggle('dark');    
        
 
-    myBtnAll.forEach((p_item)=>{
-      p_item.classList.toggle('dark');
-
-    });
-
-    // setData(`${dateTime} Theme was set to light `)
-
-    createMessage(`${dateTime} Theme was set to light `)
-    setDark("dark");
-  }
+  //   myBtnAll.forEach((p_item)=>{
+  //     p_item.classList.toggle('dark');
+  //   });   
+  // }
 
 
   
@@ -165,8 +199,9 @@ function createMessage(p_message) {
           
           <section className='world-left light'>
 
-            <button className='myBtn light theme' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>{dark} theme</button>
+          {/*   <button className='myBtn light theme' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>{dark} theme</button> */}
 
+          <button className='myBtn light theme' onClick={mode()}>{dark} theme</button>
 
             {/* js 0108 */}
             <div className='renderingBtn'></div>
