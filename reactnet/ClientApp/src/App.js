@@ -9,12 +9,21 @@ function App() {
   const [input, setInput] = useState("")
 
   const renderingBtnElm = document.querySelector('.renderingBtn');
+
+
+  //  {/* js 1208 */}
+  function submit() {
+    setData(`“Message Sent: [${input} from text area]”`)
+    setInput("");    
+  }
+
   
   function createBtn() {
     renderingBtnElm.innerHTML=`
       <button>btn(1)</button>
     `;
 
+    // className="myBtn"
     // onClick={()=>{setData("button(1) clicked")}}
 
     
@@ -50,7 +59,7 @@ function App() {
           <input type="text" value={input}  onChange={(e) => setInput(e.target.value)} />
 
           {/* 🍀js 1208. Sending input text when I click button */}
-          <button className='myBtn' onClick={()=>{setData(`“Message Sent: [${input} from text area]”`)}}>send</button>
+          <button className='myBtn' onClick={()=>{ submit(); }}>send</button>
 
           <button className='myBtn clear' onClick={()=>{setData(``)}}>clear</button>
 
