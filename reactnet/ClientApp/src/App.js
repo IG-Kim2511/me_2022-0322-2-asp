@@ -3,8 +3,8 @@ import './App.css'
 
 
 function App() {
-  const [first, setfirst] = useState("")
-  const [data, setData] = useState("hi")
+  const [theme, setTheme] = useState("")
+  const [data, setData] = useState("")
   
   return (
     <div>
@@ -14,13 +14,14 @@ function App() {
       <main className='world'>
         
         <div className='world-left'>
-          <button className='myBtn' >dark theme</button>
-          <button className='myBtn btn_me' onClick={()=>{setData('hello')}}>white</button>
+          <button className='myBtn' onClick={()=>{setData('Theme was set to Dark')}} >dark theme</button>
+          <button className='myBtn btn_me' onClick={()=>{setData('Button 3 was added')}}>white</button>
           <div className="text">text</div>
         
         </div>
         <div className='world-right'>
-          <div className="text">{first}</div>
+          
+          <div dangerouslySetInnerHTML={{__html: theme}}/>
           <div dangerouslySetInnerHTML={{__html: data}}/>
         </div>
       </main>
