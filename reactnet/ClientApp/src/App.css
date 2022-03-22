@@ -1,28 +1,5 @@
 :root {
 
-    /* main */
-  --width-main: 1200px;
-
-  /* size */
-  --base: 1rem;
-  --sm: calc(var(--base) * 1.5);
-  --med: calc(var(--base) * 3);
-  --large: calc(var(--base) * 5);
-
-  /*  */
-  --shadow: 0 2rem 3rem #777;
-
-  /* border-radius :basic 4px=0.25rem  */
-  --border-radius-4px: 0.3rem;
-
-  /* Animation :basic 300ms=0.3s  */
-  --animation_basic-duration-300ms: 300ms;
-
-  /* letterspacing : basic 0.1rem */
-  --letterspacing-basic: 0.1rem;  
-
-
-
   /* color-light */
 
   --color-light-btn: #cc0000;
@@ -99,7 +76,7 @@
       border: black solid 1px;
     }
     
-    .world .world-right{    /*  */
+    .world .world-right.light{    /*  */
         background-color: var(--color-light-right-background);      
         width: 50vw;
         height: 80vh;
@@ -115,15 +92,12 @@
 
 
     /*  */
-    .world-left .text {
+    .world-left.light .text {
         color: var(--color-light-left-text);/*  */
     }
-    .world-right .text {
+    .world-right.light .text {
         color: var(--color-light-right-text);/*  */
     }
-
-
-
 
 
   /*  */
@@ -135,8 +109,38 @@
 
 
 
+  /* Dark mode */
+
+  
+  .world .world-left.dark{     /*  */
+    background-color: var(--color-dark-left-background);      
+    width: 50vw;
+    height: 80vh;
+    border: black solid 1px;
+  }
+  
+  .world .world-right.dark{    /*  */
+      background-color: var(--color-dark-right-background);      
+      width: 50vw;
+      height: 80vh;
+      border: black solid 1px;
+}
 
 
+  /*  */
+  .myBtn.dark {    
+      background-color: var(--color-dark-btn);/*  */
+      color: var(--color-dark-btn-text);/*  */
+  }
+
+
+  /*  */
+  .world-left.dark .text {
+      color: var(--color-dark-left-text);/*  */
+  }
+  .world-right.dark .text {
+      color: var(--color-dark-right-text);/*  */
+  }
 
 
 
