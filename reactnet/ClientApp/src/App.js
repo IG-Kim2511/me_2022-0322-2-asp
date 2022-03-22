@@ -39,7 +39,7 @@ function App() {
     // className="myBtn"
     // onClick={()=>{setData("button(1) clicked")}}    
   }
-  
+
   
   // 🍀js 0310. dark mode
   const worldLeft = document.querySelector('.world-left');  
@@ -59,8 +59,10 @@ function App() {
     worldRightText.classList.toggle('dark');    
     myBtn.classList.toggle('dark');    
 
-
     setData('Theme was set to Dark')
+    
+    setTimeout(() => {   setData('')}, 1000);
+
   }
 
 
