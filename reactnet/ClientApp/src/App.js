@@ -12,6 +12,15 @@ function App() {
   const [dark, setDark] = useState("dark")
   
   
+  
+  // 🍀 js_220400. dateTime      
+    let today = new Date();
+    let date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    let dateTime = date+' '+time;
+
+
+    
   //  {/* js 1208 */}
   function submit() {
     setData(`“Message Sent: [${input} from text area]”`)
@@ -59,7 +68,9 @@ function App() {
     worldRightText.classList.toggle('dark');    
     myBtn.classList.toggle('dark');    
 
-    setData('Theme was set to Dark')
+   
+    // js_220400
+    setData(`${dateTime} Theme was set to Dark `)
 
     setTimeout(() => {   setData('')}, 1000);
 
@@ -75,7 +86,9 @@ function App() {
     worldRightText.classList.toggle('dark');    
     myBtn.classList.toggle('dark');    
 
-    setData('Theme was set to light')
+
+    setData(`${dateTime} Theme was set to light `)
+
 
     setTimeout(() => {   setData('')}, 1000);
 
@@ -95,7 +108,7 @@ function App() {
 
             <button className='myBtn' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>dark theme</button>
 
-            <button className='myBtn btn_me light' onClick={()=>{setData('Button 3 was added')}}>button 1</button>
+            <button className='myBtn btn_me light' onClick={()=>{setData(`${dateTime} Button 3 was added`)}}>button 1</button>
 
 
             <div className="text light">text</div>
