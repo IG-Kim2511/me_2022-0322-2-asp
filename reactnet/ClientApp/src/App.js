@@ -10,7 +10,9 @@ function App() {
   // {/* js 1149 */}  {/* js 1208 */}
   const [input, setInput] = useState("")
   
-  const [dark, setDark] = useState("Dark")
+  const [dark, setDark] = useState(true)
+  
+  const [darktitle, setDarktitle] = useState("Dark")
   
   
   
@@ -30,37 +32,32 @@ function App() {
   const worldRight = document.querySelector('.world-right');
   const worldRightText = document.querySelector('.world-right .text');
   
-  const myBtn = document.querySelector('.myBtn');
-  
   const myBtnAll = document.querySelectorAll('.myBtn');
   
 
-  const themeElm = document.querySelector('.theme');
-
   function darkMode() {
+       
+    //🧨 js220400
+    // setData(`${dateTime} Theme was set to Dark `)
+    createMessage(`${dateTime} Theme was set to light `)
+
+    if ({dark}) {
+      setDarktitle("Light");            
+    }else{
+      setDarktitle("Dark");
+    }
+
     worldLeft.classList.toggle('dark');    
     worldRight.classList.toggle('dark');    
 
     worldLeftText.classList.toggle('dark');    
-    worldRightText.classList.toggle('dark');    
+    worldRightText.classList.toggle('dark');   
      
-
     myBtnAll.forEach((p_item)=>{
       p_item.classList.toggle('dark');
 
     });
 
-   
-    //🧨 js220400
-    // setData(`${dateTime} Theme was set to Dark `)
-    createMessage(`${dateTime} Theme was set to light `)
-
-
-    if (dark ==="Dark") {
-      setDark("Light");      
-    }else{
-      setDark("Dark");
-    }
   }
 
   
@@ -169,7 +166,7 @@ function createMessage(p_message) {
           
           <section className='world-left light'>
 
-            <button className='myBtn light theme' onClick={()=>{darkMode()}}>{dark} theme</button>
+            <button className='myBtn light theme' onClick={()=>{darkMode()}}>{darktitle} theme</button>
 
 
             {/* js 0108 */}
