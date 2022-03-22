@@ -35,14 +35,12 @@ function App() {
           {/* js 1149 */}
           <input type="text" value={input}  onChange={(e) => setInput(e.target.value)} />
 
-
-
           {/* 🍀js 1208. Sending input text when I click button */}
           <button className='myBtn' onClick={()=>{setData(`“Message Sent: [${input} from text area]”`)}}>send</button>
 
-
-
           <button className='myBtn clear' onClick={()=>{setData(``)}}>clear</button>
+
+          <button className='myBtn block'>Add Button</button>
         </footer>
     </div>
   );
