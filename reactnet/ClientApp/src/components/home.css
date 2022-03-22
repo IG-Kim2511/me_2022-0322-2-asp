@@ -3,10 +3,6 @@
     /* main */
   --width-main: 1200px;
 
-  /* font */
-  --font-base: 'Cormorant Upright', serif;
-  --font-alt: 'Open Sans', sans-serif;
-  
   /* size */
   --base: 1rem;
   --sm: calc(var(--base) * 1.5);
@@ -23,17 +19,13 @@
   --animation_basic-duration-300ms: 300ms;
 
   /* letterspacing : basic 0.1rem */
-  --letterspacing-basic: 0.1rem;
-
-  
+  --letterspacing-basic: 0.1rem;  
 
   /* color */
   --color-main1: #fff;
   --color-main2: #fff;
   --color-main3: #fff;
 
-
-   /* bootstrap */
   --color-primary: #0d6efd;
   --color-secondary: #6C757D;
   --color-success: #198754;
@@ -41,10 +33,7 @@
   --color-warning: #ffc107;
   --color-info: #0dcaf0;
   --color-light: #f8f9fa;
-  --color-dark: #212529;
-
-
-  
+  --color-dark: #212529;  
   }
   
   * {
@@ -81,4 +70,23 @@
   .myBtn:active {
     position: relative;
     top: 1px;
+  }
+
+  /* 🥚 */
+
+  .world{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .world .world-left{
+      background-color: var(--color-light);      
+      width: 50vw;
+      height: 80vh;
+  }
+
+  .world .world-right{
+      background-color: var(--color-secondary);      
+      width: 50vw;
+      height: 80vh;
   }
