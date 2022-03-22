@@ -34,6 +34,7 @@ function App() {
   const myBtnAll = document.querySelectorAll('.myBtn');
   
 
+  const themeElm = document.querySelector('.theme');
 
   function darkMode() {
     worldLeft.classList.toggle('dark');    
@@ -52,7 +53,6 @@ function App() {
     //🧨 js220400
     setData(`${dateTime} Theme was set to Dark `)
 
-    setTimeout(() => {   setData('')}, 2000);
 
     setDark("light");
   }
@@ -76,19 +76,21 @@ function App() {
     setData(`${dateTime} Theme was set to light `)
 
 
-    setTimeout(() => {   setData('')}, 2000);
 
     setDark("dark");
+
+    
+
+    
   }
 
 
   
     
-  // 🍀 {/* js 1208 */}
+  // 🍀 {/* js 1208, js 1149 */}
   function submit() {
     setData(`“Message Sent: [${input} from text area]”`)
     
-    setTimeout(() => {   setData('')}, 2000); 
     setInput("");   
   }
 
@@ -139,7 +141,7 @@ function App() {
           
           <section className='world-left light'>
 
-            <button className='myBtn light' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>dark theme</button>
+            <button className='myBtn light theme' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>{dark} theme</button>
 
             <div className="text light">text</div>
 
@@ -164,14 +166,15 @@ function App() {
 
         <footer>
           {/* js 1149 */}
-          <input type="text" value={input}  onChange={(e) => setInput(e.target.value)} />
+          <textarea type="text" value={input}  onChange={(e) => setInput(e.target.value)} />
 
           {/* 🍀js 1208. Sending input text when I click button */}
           <button className='myBtn light' onClick={()=>{ submit() }}>send</button>
+          
 
-          <button className='myBtn clear light' onClick={()=>{clear()}}>clear</button>
-
-          <button className='myBtn block light' onClick={()=>{createBtn()}}>Add Button</button>
+          <br />
+          <button className='myBtn light' onClick={()=>{createBtn()}}>Add Button</button>
+          <button className='myBtn clear light' onClick={()=>{clear()}}>clear Buttons</button>
         </footer>
     </div>
   );
