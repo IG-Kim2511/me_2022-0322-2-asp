@@ -139,11 +139,19 @@ function createMessage(p_message) {
 }
 
   // 🍀 {/* js 1208, js 1149 */}
+
+  const submitBtn = document.querySelector('.submit');
+
   function submit() {
+      
+      if (input==="") {
+         submitBtn.disabled = true;     
+      }else{        
+        createMessage(`“Message Sent: [${input} from text area]”`);
 
-     createMessage(`“Message Sent: [${input} from text area]”`);
-
-     setInput("");   
+        setInput("");   
+      }
+      submitBtn.disabled = false  
   }
 
 
@@ -186,9 +194,9 @@ function createMessage(p_message) {
           <textarea type="text" value={input}  onChange={(e) => setInput(e.target.value)} />
 
           {/* 🍀js 1208. Sending input text when I click button */}
-          <button className='myBtn light' onClick={()=>{ submit() }}>send</button>
+          <button className='myBtn light submit' onClick={()=>{ submit()}}>send</button>
           
-          
+
 
           <br />
           <button className='myBtn light' onClick={()=>{createBtn()}}>Add Button</button>
