@@ -58,6 +58,9 @@ function App() {
   const worldRightText = document.querySelector('.world-right .text');
   
   const myBtn = document.querySelector('.myBtn');
+  
+  const myBtnAll = document.querySelectorAll('.myBtn');
+  
 
 
   function darkMode() {
@@ -66,7 +69,12 @@ function App() {
 
     worldLeftText.classList.toggle('dark');    
     worldRightText.classList.toggle('dark');    
-    myBtn.classList.toggle('dark');    
+     
+
+    myBtnAll.forEach((p_item)=>{
+      p_item.classList.toggle('dark');
+
+    });
 
    
     // js220400
@@ -84,7 +92,13 @@ function App() {
 
     worldLeftText.classList.toggle('dark');    
     worldRightText.classList.toggle('dark');    
-    myBtn.classList.toggle('dark');    
+       
+
+    myBtnAll.forEach((p_item)=>{
+      p_item.classList.toggle('dark');
+
+    });
+
 
 
     setData(`${dateTime} Theme was set to light `)
