@@ -108,7 +108,7 @@ function App() {
       button.innerHTML = `button ${i}`;
   
       button.onclick = function(){
-           setData(`button ${i} clicked`)
+           setData(`${dateTime} Button ${i} clicked`)
               return false;
           };
       
@@ -118,14 +118,6 @@ function App() {
       setData(`button 1 added`)
   }
   
-
-
-  // 🍀 js220406
-  function btnClicked() {
-    setData(`${dateTime} Button (x) clicked`)
-    
-    setTimeout(() => {   setData('')}, 1000);
-  }
 
 
   return (
