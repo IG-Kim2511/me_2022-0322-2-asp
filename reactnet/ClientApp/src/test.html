@@ -4,20 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>🍀</title>
 </head>
 <body>
-    
+
+    <h1>2</h1>
+
+    <button onclick="foo()">asfdasdfasf</button>
     <div class="test">test</div>
+
+    
     <script>
+        let i = 0;
 
-        
-        let today = new Date();
-        let date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
-        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        let dateTime = date+' '+time;
+        let foo = function(){
+                    let button = document.createElement('button');
 
-        console.log(dateTime)
+                    i++;
+
+                    button.innerHTML = `${i}`;
+
+                    button.onclick = function(){
+                            alert('here be dragons');
+                            return false;
+                        };
+                    
+                    document.body.appendChild(button);
+                };
+
     </script>
+    
+
+    <!-- 
+
+            <button onclick="foo()">asfdasdfasf</button>
+            <div class="test">test</div>
+            <script>
+
+                        
+                let foo = function(){
+                    let button = document.createElement('button');
+
+                    button.innerHTML = 'click me';
+
+                    button.onclick = function(){
+                            alert('here be dragons');return false;
+                        };
+                    
+                    document.body.appendChild(button);
+                };
+            </script>
+     -->
 </body>
 </html>

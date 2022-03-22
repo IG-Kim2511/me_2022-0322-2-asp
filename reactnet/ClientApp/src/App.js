@@ -20,34 +20,6 @@ function App() {
     let dateTime = date+' '+time;
 
 
-    
-  //  {/* js 1208 */}
-  function submit() {
-    setData(`“Message Sent: [${input} from text area]”`)
-    setInput("");    
-  }
-
-
-  //  {/* 🍀js 0108 */}  
-  const renderingBtnElm = document.querySelector('.renderingBtn');
-  
-  function createBtn() {
-
-      // let button =  document.createElement('button');
-      // button.classList.add('myBtn');
-      // button.innerHTML = `btn(1)`;     
-
-      // renderingBtnElm.append(`button`);
-    
-    renderingBtnElm.innerHTML +=`
-      <button className="myBtn">btn(1)</button>
-    `;
-
-    setData(`button 1 added`)
-
-    // className="myBtn"
-    // onClick={()=>{setData("button(1) clicked")}}    
-  }
 
   
   // 🍀 js 0310. dark mode
@@ -110,12 +82,50 @@ function App() {
   }
 
 
+  
+    
+  //  {/* js 1208 */}
+  function submit() {
+    setData(`“Message Sent: [${input} from text area]”`)
+    
+    setTimeout(() => {   setData('')}, 1000); 
+    setInput("");   
+  }
+
+    //  {/* 🍀js 0108 */}  
+  const renderingBtnElm = document.querySelector('.renderingBtn');
+
+  const [i, setI] = useState(1)
+
+  function createBtn() {
+  
+ 
+      let button = document.createElement('button');
+      button.classList.add(`myBtn`)
+
+  
+      setI(i+1);
+      button.innerHTML = `button ${i}`;
+  
+      button.onclick = function(){
+           setData(`button ${i} clicked`)
+              return false;
+          };
+      
+      renderingBtnElm.appendChild(button);
+
+
+      setData(`button 1 added`)
+  }
+  
+
+
   // 🍀 js220406
   function btnClicked() {
     setData(`${dateTime} Button (x) clicked`)
+    
+    setTimeout(() => {   setData('')}, 1000);
   }
-
-
 
 
   return (
@@ -128,9 +138,6 @@ function App() {
           <section className='world-left light'>
 
             <button className='myBtn light' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>dark theme</button>
-
-            <button className='myBtn light' onClick={()=>{btnClicked()}}>button 1</button>
-
 
             <div className="text light">text</div>
 
