@@ -1,30 +1,28 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router';
-import { Layout } from './components/Layout';
-import { Home } from './components/Home';
-import { FetchData } from './components/FetchData';
-import { Counter } from './components/Counter';
-import AuthorizeRoute from './components/api-authorization/AuthorizeRoute';
-import ApiAuthorizationRoutes from './components/api-authorization/ApiAuthorizationRoutes';
-import { ApplicationPaths } from './components/api-authorization/ApiAuthorizationConstants';
-
-import './custom.css'
+import React, { useState } from 'react'
+import './App.css'
 
 
-export default class App extends Component {
-  static displayName = App.name;
+function App() {
+  const [first, setfirst] = useState("")
+  return (
+    <div>
+    <div className='title'>
+      <h1>Hello, Pioneering Programmers!</h1>
+      <button className='myBtn'>dark</button>
+    </div>
+    <main className='world'>
+      <div className='world-left'>
+        <button className='myBtn btn_me'>white</button>
+        <div className="text">text</div>
+      
+      </div>
+      <div className='world-right'>
+        <div className="text">{first}</div>
+      </div>
+    </main>
 
-  render () {
-    return (
-      <Layout>
-        <Route exact path='/' component={Home} />
-
-        
-        <Route path='/counter' component={Counter} />
-        
-        <AuthorizeRoute path='/fetch-data' component={FetchData} />
-        <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
-      </Layout>
-    );
-  }
+  </div>
+  );
 }
+
+export default App;
