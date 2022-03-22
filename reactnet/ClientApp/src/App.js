@@ -50,17 +50,20 @@ function App() {
             <button className='myBtn' onClick={()=>{setData('Theme was set to Dark')}} >dark theme</button>
 
 
-            <button className='myBtn btn_me light' onClick={()=>{setData('Button 3 was added')}}>white</button>
+            <button className='myBtn btn_me light' onClick={()=>{setData('Button 3 was added')}}>button 1</button>
 
-            
-            <div className="text">text</div>
+
+            <div className="text light">text</div>
 
             <div className='renderingBtn'></div>
           
           </div>
-          <div className='world-right'>
+          <div className='world-right light'>
             
             <div dangerouslySetInnerHTML={{__html: data}}/>
+
+            
+            <div className="text light">text</div>
             
             {/* js 1149 */}
             {/* <div>“Message Sent: [{input} from text area]”</div> */}
