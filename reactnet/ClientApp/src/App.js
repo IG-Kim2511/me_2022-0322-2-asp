@@ -49,7 +49,7 @@ function App() {
     });
 
    
-    // js220400
+    //🧨 js220400
     setData(`${dateTime} Theme was set to Dark `)
 
     setTimeout(() => {   setData('')}, 1000);
@@ -84,7 +84,7 @@ function App() {
 
   
     
-  //  {/* js 1208 */}
+  // 🍀 {/* js 1208 */}
   function submit() {
     setData(`“Message Sent: [${input} from text area]”`)
     
@@ -115,9 +115,19 @@ function App() {
       renderingBtnElm.appendChild(button);
 
 
-      setData(`button 1 added`)
+      setData(`${dateTime} button ${i} added`)
   }
-  
+
+
+  //  {/* 🍀js 0504 */}  
+  const renderingBtn = document.querySelector('.renderingBtn');
+
+  function clear() {
+    setData(``)
+    renderingBtn.innerHTML=``
+    setI(1);  
+  }
+
 
 
   return (
@@ -159,7 +169,7 @@ function App() {
           {/* 🍀js 1208. Sending input text when I click button */}
           <button className='myBtn light' onClick={()=>{ submit(); }}>send</button>
 
-          <button className='myBtn clear light' onClick={()=>{setData(``)}}>clear</button>
+          <button className='myBtn clear light' onClick={()=>{clear()}}>clear</button>
 
           <button className='myBtn block light' onClick={()=>{createBtn();}}>Add Button</button>
         </footer>
