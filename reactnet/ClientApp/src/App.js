@@ -94,28 +94,17 @@ function App() {
 
     //  {/* 🍀js 0108 */}  
   const renderingBtnElm = document.querySelector('.renderingBtn');
-  let i = 0;
+
+  const [i, setI] = useState(1)
 
   function createBtn() {
   
-        // let button =  document.createElement('button');
-        // button.classList.add('myBtn');
-        // button.innerHTML = `btn(1)`;     
-  
-        // renderingBtnElm.append(`button`);
-      
-      // renderingBtnElm.innerHTML +=`
-      //   <button className="myBtn">btn(1)</button>
-      // `;
-  
-      // setData(`button 1 added`)
-  
-      // className="myBtn"
-      // onClick={()=>{setData("button(1) clicked")}}    
-  
+ 
       let button = document.createElement('button');
+      button.classList.add(`myBtn`)
+
   
-      i++;
+      setI(i+1);
       button.innerHTML = `button ${i}`;
   
       button.onclick = function(){
@@ -149,9 +138,6 @@ function App() {
           <section className='world-left light'>
 
             <button className='myBtn light' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>dark theme</button>
-
-            <button className='myBtn light' onClick={()=>{btnClicked()}}>button 1</button>
-
 
             <div className="text light">text</div>
 
