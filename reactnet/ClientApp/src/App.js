@@ -3,12 +3,13 @@ import './App.css'
 
 
 function App() {
+  const renderingBtnElm = document.querySelector('.renderingBtn');
+  
   const [data, setData] = useState("")
   
   // {/* js 1149 */}  {/* js 1208 */}
   const [input, setInput] = useState("")
 
-  const renderingBtnElm = document.querySelector('.renderingBtn');
 
 
   //  {/* js 1208 */}
@@ -19,8 +20,15 @@ function App() {
 
   
   function createBtn() {
-    renderingBtnElm.innerHTML=`
-      <button>btn(1)</button>
+
+      // let button =  document.createElement('button');
+      // button.classList.add('myBtn');
+      // button.innerHTML = `btn(1)`;     
+
+      // renderingBtnElm.append(`button`);
+    
+    renderingBtnElm.innerHTML +=`
+      <button className="myBtn">btn(1)</button>
     `;
 
     setData(`button 1 added`)
