@@ -52,7 +52,8 @@ function App() {
 
    
     //🧨 js220400
-    setData(`${dateTime} Theme was set to Dark `)
+    // setData(`${dateTime} Theme was set to Dark `)
+    createMessage(`${dateTime} Theme was set to light `)
 
 
     setDark("light");
@@ -72,17 +73,10 @@ function App() {
 
     });
 
+    // setData(`${dateTime} Theme was set to light `)
 
-
-    setData(`${dateTime} Theme was set to light `)
-
-
-
+    createMessage(`${dateTime} Theme was set to light `)
     setDark("dark");
-
-    
-
-    
   }
 
 
@@ -181,11 +175,7 @@ function createMessage(p_message) {
 
 
           <section className='world-right light'>
-            
-            {/* js 220540 */}
-            <div dangerouslySetInnerHTML={{__html: data}}/>
-
-
+     
             {/* js 220540 */}  
             <div className='renderingMessage'></div>
 
