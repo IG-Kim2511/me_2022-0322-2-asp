@@ -17,7 +17,7 @@ function App() {
       
       </div>
       <div className='world-right'>
-        <div className="text">text</div>
+        <div className="text">{first}</div>
       </div>
     </main>
 
