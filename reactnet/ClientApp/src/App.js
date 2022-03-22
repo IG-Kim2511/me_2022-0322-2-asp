@@ -87,12 +87,15 @@ function App() {
   //  {/* js 1208 */}
   function submit() {
     setData(`“Message Sent: [${input} from text area]”`)
-    setInput("");    
+    
+    setTimeout(() => {   setData('')}, 1000); 
+    setInput("");   
   }
 
     //  {/* 🍀js 0108 */}  
   const renderingBtnElm = document.querySelector('.renderingBtn');
-  
+  let i = 0;
+
   function createBtn() {
   
         // let button =  document.createElement('button');
@@ -112,10 +115,11 @@ function App() {
   
       let button = document.createElement('button');
   
-      button.innerHTML = 'click me';
+      i++;
+      button.innerHTML = `button ${i}`;
   
       button.onclick = function(){
-           setData(`button 1 clicked`)
+           setData(`button ${i} clicked`)
               return false;
           };
       
@@ -126,7 +130,7 @@ function App() {
   }
   
 
-  
+
   // 🍀 js220406
   function btnClicked() {
     setData(`${dateTime} Button (x) clicked`)
