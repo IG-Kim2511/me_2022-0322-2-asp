@@ -74,14 +74,14 @@
 
 
 
-  .world .world-left.light{     /*  */
+  .world .world-left{     /*  */
       background-color: var(--color-light-left-background);      
       width: 45vw;
       height: 80vh;
       border: black solid 1px;
     }
     
-    .world .world-right.light{    /*  */
+    .world .world-right{    /*  */
         background-color: var(--color-light-right-background);      
         width: 45vw;
         height: 80vh;
@@ -90,17 +90,17 @@
 
 
     /*  */
-    .myBtn.light {    
+    .myBtn {    
         background-color: var(--color-light-btn);/*  */
         color: var(--color-light-btn-text);/*  */
     }
 
 
     /*  */
-    .world-left.light .text {
+    .world-left .text {
         color: var(--color-light-left-text);/*  */
     }
-    .world-right.light .text {
+    .world-right .text {
         color: var(--color-light-right-text);/*  */
     }
 

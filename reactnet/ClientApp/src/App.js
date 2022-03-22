@@ -10,7 +10,9 @@ function App() {
   // {/* js 1149 */}  {/* js 1208 */}
   const [input, setInput] = useState("")
   
-  const [dark, setDark] = useState("dark")
+  const [dark, setDark] = useState(true)
+  
+  const [darktitle, setDarktitle] = useState("Dark")
   
   
   
@@ -25,63 +27,48 @@ function App() {
   
   // 🍀 js 0310. dark mode
   const worldLeft = document.querySelector('.world-left');  
-  const worldLeftText = document.querySelector('.world-left .text');
-
   const worldRight = document.querySelector('.world-right');
-  const worldRightText = document.querySelector('.world-right .text');
+
+
   
-  const myBtn = document.querySelector('.myBtn');
-  
+  const worldLeftTextAll = document.querySelectorAll('.world-left .text');
+  const worldRightTextAll = document.querySelectorAll('.world-right .text');
+
   const myBtnAll = document.querySelectorAll('.myBtn');
   
 
-  const themeElm = document.querySelector('.theme');
-
   function darkMode() {
-    worldLeft.classList.toggle('dark');    
-    worldRight.classList.toggle('dark');    
-
-    worldLeftText.classList.toggle('dark');    
-    worldRightText.classList.toggle('dark');    
-     
-
-    myBtnAll.forEach((p_item)=>{
-      p_item.classList.toggle('dark');
-
-    });
-
-   
+       
     //🧨 js220400
     // setData(`${dateTime} Theme was set to Dark `)
     createMessage(`${dateTime} Theme was set to light `)
 
-
-    setDark("light");
-  }
-
-  
-  function lightMode() {
-    worldLeft.classList.toggle('dark');    
-    worldRight.classList.toggle('dark');    
-
-    worldLeftText.classList.toggle('dark');    
-    worldRightText.classList.toggle('dark');    
-       
+    if ({dark}) {
+      setDarktitle("Light");            
+    }else{
+      setDarktitle("Dark");
+    }
 
     myBtnAll.forEach((p_item)=>{
-      p_item.classList.toggle('dark');
-
+      p_item.classList.toggle("dark");
     });
 
-    // setData(`${dateTime} Theme was set to light `)
+    worldLeftTextAll.forEach((p_item)=>{
+      p_item.classList.toggle("dark");
+    });
 
-    createMessage(`${dateTime} Theme was set to light `)
-    setDark("dark");
+    worldRightTextAll.forEach((p_item)=>{
+      p_item.classList.toggle("dark");
+    });
+
+        
+    worldLeft.classList.toggle("dark");    
+    worldRight.classList.toggle("dark");    
+     
+
   }
 
-
   
-    
 
 
     //  {/* 🍀js 0108. create button  */}  
@@ -165,9 +152,10 @@ function createMessage(p_message) {
           
           <section className='world-left light'>
 
-            <button className='myBtn light theme' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>{dark} theme</button>
+            <button className='myBtn light theme' onClick={()=>{darkMode()}}>{darktitle} theme</button>
 
 
+            <div className="text">text</div>
             {/* js 0108 */}
             <div className='renderingBtn'></div>
           
@@ -176,6 +164,8 @@ function createMessage(p_message) {
 
           <section className='world-right light'>
      
+           <div className="text">text</div>
+
             {/* js 220540 */}  
             <div className='renderingMessage'></div>
 
