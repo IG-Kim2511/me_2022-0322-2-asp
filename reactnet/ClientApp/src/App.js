@@ -9,7 +9,7 @@ function App() {
   // {/* js 1149 */}  {/* js 1208 */}
   const [input, setInput] = useState("")
   
-  const [dark, setDark] = useState(true)
+  const [dark, setDark] = useState("dark")
   
   
   //  {/* js 1208 */}
@@ -60,10 +60,28 @@ function App() {
     myBtn.classList.toggle('dark');    
 
     setData('Theme was set to Dark')
-    
+
     setTimeout(() => {   setData('')}, 1000);
 
+    setDark("light");
   }
+
+  
+  function lightMode() {
+    worldLeft.classList.toggle('dark');    
+    worldRight.classList.toggle('dark');    
+
+    worldLeftText.classList.toggle('dark');    
+    worldRightText.classList.toggle('dark');    
+    myBtn.classList.toggle('dark');    
+
+    setData('Theme was set to light')
+
+    setTimeout(() => {   setData('')}, 1000);
+
+    setDark("dark");
+  }
+
 
 
   return (
@@ -75,7 +93,7 @@ function App() {
           
           <section className='world-left light'>
 
-            <button className='myBtn' onClick={()=>{darkMode();}} >dark theme</button>
+            <button className='myBtn' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>dark theme</button>
 
             <button className='myBtn btn_me light' onClick={()=>{setData('Button 3 was added')}}>button 1</button>
 
