@@ -13,7 +13,7 @@ function App() {
   
   
   
-  // 🍀 js_220400. dateTime      
+  // 🍀 js220400. dateTime      
     let today = new Date();
     let date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
     let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -50,7 +50,7 @@ function App() {
   }
 
   
-  // 🍀js 0310. dark mode
+  // 🍀 js 0310. dark mode
   const worldLeft = document.querySelector('.world-left');  
   const worldLeftText = document.querySelector('.world-left .text');
 
@@ -58,6 +58,9 @@ function App() {
   const worldRightText = document.querySelector('.world-right .text');
   
   const myBtn = document.querySelector('.myBtn');
+  
+  const myBtnAll = document.querySelectorAll('.myBtn');
+  
 
 
   function darkMode() {
@@ -66,10 +69,15 @@ function App() {
 
     worldLeftText.classList.toggle('dark');    
     worldRightText.classList.toggle('dark');    
-    myBtn.classList.toggle('dark');    
+     
+
+    myBtnAll.forEach((p_item)=>{
+      p_item.classList.toggle('dark');
+
+    });
 
    
-    // js_220400
+    // js220400
     setData(`${dateTime} Theme was set to Dark `)
 
     setTimeout(() => {   setData('')}, 1000);
@@ -84,7 +92,13 @@ function App() {
 
     worldLeftText.classList.toggle('dark');    
     worldRightText.classList.toggle('dark');    
-    myBtn.classList.toggle('dark');    
+       
+
+    myBtnAll.forEach((p_item)=>{
+      p_item.classList.toggle('dark');
+
+    });
+
 
 
     setData(`${dateTime} Theme was set to light `)
@@ -94,6 +108,13 @@ function App() {
 
     setDark("dark");
   }
+
+
+  // 🍀 js220406
+  function btnClicked() {
+    setData(`${dateTime} Button (x) clicked`)
+  }
+
 
 
 
@@ -106,9 +127,9 @@ function App() {
           
           <section className='world-left light'>
 
-            <button className='myBtn' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>dark theme</button>
+            <button className='myBtn light' onClick={()=>{ dark ==="dark" ? darkMode() : lightMode()}}>dark theme</button>
 
-            <button className='myBtn btn_me light' onClick={()=>{setData(`${dateTime} Button 3 was added`)}}>button 1</button>
+            <button className='myBtn light' onClick={()=>{btnClicked()}}>button 1</button>
 
 
             <div className="text light">text</div>
@@ -137,11 +158,11 @@ function App() {
           <input type="text" value={input}  onChange={(e) => setInput(e.target.value)} />
 
           {/* 🍀js 1208. Sending input text when I click button */}
-          <button className='myBtn' onClick={()=>{ submit(); }}>send</button>
+          <button className='myBtn light' onClick={()=>{ submit(); }}>send</button>
 
-          <button className='myBtn clear' onClick={()=>{setData(``)}}>clear</button>
+          <button className='myBtn clear light' onClick={()=>{setData(``)}}>clear</button>
 
-          <button className='myBtn block' onClick={()=>{createBtn();}}>Add Button</button>
+          <button className='myBtn block light' onClick={()=>{createBtn();}}>Add Button</button>
         </footer>
     </div>
   );
