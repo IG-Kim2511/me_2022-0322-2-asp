@@ -5,14 +5,14 @@ import './App.css'
 function App() {
   
   // 🍀{/* js 220540 */}  
-  const [data, setData] = useState("")
+  const [data, setData] = useState("");
   
   // {/* js 1149 */}  {/* js 1208 */}
-  const [input, setInput] = useState("")
+  const [input, setInput] = useState("");
   
-  const [dark, setDark] = useState(true)
+  const [dark, setDark] = useState(0);
   
-  const [darktitle, setDarktitle] = useState("Dark")
+  const [darktitle, setDarktitle] = useState("Dark");
   
   
   
@@ -41,14 +41,19 @@ function App() {
        
     //🧨 js220400
     // setData(`${dateTime} Theme was set to Dark `)
-    createMessage(`${dateTime} Theme was set to light `)
-
-    if ({dark}) {
-      setDarktitle("Light");            
-    }else{
-      setDarktitle("Dark");
+    
+    if (dark) {
+      setDarktitle("Light");
+      setDark(false);     
+      createMessage(`${dateTime} Theme was set to light `)
+    }else {
+      setDarktitle("Dark");  
+      setDark(true);           
+      createMessage(`${dateTime} Theme was set to dark `)
+      
     }
 
+   
     myBtnAll.forEach((p_item)=>{
       p_item.classList.toggle("dark");
     });
